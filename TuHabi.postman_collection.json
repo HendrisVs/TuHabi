@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "faa0fdb6-206a-4f76-84ed-e0642ffa5420",
+		"name": "TuHabi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12429192"
+	},
+	"item": [
+		{
+			"name": "Sin filtro",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/properties/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"properties",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filtro: Año, ciudad, estado",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "year",
+						"value": "2020",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"status\" : \"pre_venta\",\r\n\"city\" : \"bogota\",\r\n\"year\" : \"2000\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/properties/filter?year=3000&city=bogota&status=en_venta",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"properties",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "3000"
+						},
+						{
+							"key": "city",
+							"value": "bogota"
+						},
+						{
+							"key": "status",
+							"value": "en_venta"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
