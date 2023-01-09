@@ -47,8 +47,8 @@ Verificar que el servicio esté corriendo de forma local
 Ejecutar el comando: 
  ```python unitest_main.py```
 
+
 # Proyecto: Segunda parte 
-# - En desarrollo
 Para implementación de servicio donde el usuario indique qué propieda le gusta, se sugiere agregar en las tablas existentes La llaves principales de cada tabla y sus Llaves foraneas si se requiere, ésto para asegurar la que los datos insertados sí tengan relación con otras tablas.
 Además que es necesario para crear la nueva tabla donde se guardará el Historico de "Likes" y ésta sea creada con relaciones de Llaves foráneas también.
 
