@@ -55,7 +55,7 @@ python unitest_main.py
 
 
 # Proyecto: Segunda parte 
-Para implementación de servicio donde el usuario indique qué propieda le gusta, se sugiere agregar en las tablas existentes La llaves principales de cada tabla y sus Llaves foraneas si se requiere, ésto para asegurar la que los datos insertados sí tengan relación con otras tablas.
+Para implementación de servicio donde el usuario indique qué propiedad le gusta, se sugiere agregar en las tablas existentes las Llaves primarias de cada tabla y sus Llaves foraneas si se requiere, ésto para asegurar la que los datos insertados sí tengan relación con otras tablas.
 Además que es necesario para crear la nueva tabla donde se guardará el Historico de "Likes" y ésta sea creada con relaciones de Llaves foráneas también.
 
 El diagrama sugerido para las relaciones es el siguiente:
@@ -89,10 +89,6 @@ ALTER TABLE habi_db.status_history
     ADD FOREIGN KEY (status_id) REFERENCES habi_db.status(id);
 ~~~
 
-
-
-
-
 Se crea la tabla de histórico de Likes con las siguientes características. De ésta manera dejamos la selección de elementos únicos en el query de Consulta. 
 
 CREAR TABLA DE LIKES
@@ -117,7 +113,6 @@ INSERT INTO like_status (user_id, property_id, liked)
 ~~~
 
 Para seleccionar  todos los usuarios que estén interesados en una propiedad específica (id de propiedad), se realiza con el siguiente Query, para el ejemplo el id de propiedad = 97
-
 
 ~~~
 select  property.id,
